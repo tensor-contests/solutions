@@ -1,0 +1,6 @@
+l1 = input()
+l2 = input()
+s = input()
+m = dict((l1[i], l2[i]) for i in range(26))
+m.update((l1[i].upper(), l2[i].upper()) for i in range(26))
+print(''.join(m.setdefault(c, c) for c in s))
